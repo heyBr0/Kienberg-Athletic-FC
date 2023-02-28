@@ -1,4 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700&display=swap');
+/* ./styles/globals.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 
 body {
   background: #f2f2f2;
@@ -42,4 +47,12 @@ footer {
 .not-found a{
   color: #4979ff;
   text-decoration: underline;
+}
+
+.active-class-name{
+  color: yellow;
+}
+
+.non-active-class-name{
+  color: red;
 }
