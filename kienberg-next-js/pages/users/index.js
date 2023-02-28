@@ -15,12 +15,12 @@ const Ninjas = ({ users }) => {
   return (
     <>
       <Head>
-        <title>Users List | Users</title>
+        <title>Kienberg | Players</title>
         <meta name="keywords" content="users" />
       </Head>
 
       <div>
-        <h1>All users</h1>
+        <h1>All players</h1>
         {users.map((user) => (
           <Link href={"/users/" + user.id} key={user.id}>
             <p className={styles.single}>{user.name}</p>

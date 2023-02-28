@@ -6,8 +6,8 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Users List | Home</title>
-        <meta name="keywords" content="users"/>
+        <title>Kienberg | Home</title>
+        <meta name="keywords" content="users" />
       </Head>
       <div>
         <h1 className={styles.title}>Homepage</h1>
@@ -26,7 +26,7 @@ export default function Home() {
           est amet!
         </p>
         <Link href="/users" className={styles.btn}>
-          See User listing
+          See players listing
         </Link>
       </div>
     </>
