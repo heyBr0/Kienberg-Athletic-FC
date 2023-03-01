@@ -1,5 +1,5 @@
 import Head from "next/head";
-import styles from "../styles/Home.module.css";
+import Image from "next/image";
 import Link from "next/link";
 
 export default function Home() {
@@ -9,26 +9,125 @@ export default function Home() {
         <title>Kienberg | Home</title>
         <meta name="keywords" content="users" />
       </Head>
-      <div>
-        <h1 className={styles.title}>Homepage</h1>
-        <p className={styles.text}>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum, fuga
-          soluta? Lorem ipsum dolor sit amet consectetur adipisicing elit.
-          Doloribus harum facere illum voluptatem nobis similique ab quia odit
-          obcaecati vel culpa quis aspernatur, at omnis expedita adipisci eum
-          est amet!
-        </p>
-        <p className={styles.text}>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum, fuga
-          soluta? Lorem ipsum dolor sit amet consectetur adipisicing elit.
-          Doloribus harum facere illum voluptatem nobis similique ab quia odit
-          obcaecati vel culpa quis aspernatur, at omnis expedita adipisci eum
-          est amet!
-        </p>
-        <Link href="/users" className={styles.btn}>
+      <nav
+        class="sticky top-20 z-10 hidden md:block space-x-3 text-xl text-white"
+        aria-label="main"
+      >
+        <a href="#welcome1" className="hover:opacity-90">
+          Tickets
+        </a>
+        <a href="#welcome2" className="hover:opacity-90">
+          Stadium
+        </a>
+        <a href="#welcome3" className="hover:opacity-90">
+          Contact
+        </a>
+      </nav>
+      <section
+        id="welcome1"
+        className="widescreen:section-min-height tallscreen:section-min-height mb-12 flex h-screen scroll-mt-20 flex-col-reverse items-center justify-center gap-8 p-6 sm:flex-row"
+      >
+        <article className="sm:w-1/2">
+          <h2 className="max-w-md text-center text-4xl font-bold text-slate-900 dark:text-white sm:text-left sm:text-5xl">
+            Welcome to official{" "}
+            <span className="text-indigo-700 dark:text-indigo-300">
+              Kienberg Athletic
+            </span>{" "}
+            website
+          </h2>
+
+          <p className="text-2-xl mt-4 max-w-md text-center sm:text-left">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum, fuga
+            soluta? Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Doloribus harum facere illum voluptatem nobis similique ab quia odit
+            obcaecati vel culpa quis aspernatur, at omnis expedita adipisci eum
+            est amet!
+          </p>
+
+          <p className="text-2-xl mt-4 max-w-md text-center sm:text-left">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum, fuga
+            soluta? Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Doloribus harum facere illum voluptatem nobis similique ab quia odit
+            obcaecati vel culpa quis aspernatur, at omnis expedita adipisci eum
+            est amet!
+          </p>
+        </article>
+
+        <Image
+          src="/8957173.png"
+          width={64}
+          height={64}
+          alt="logo"
+          className="w-1/2"
+        />
+      </section>
+
+      <hr className="mx-auto w-1/2 bg-black dark:bg-white" />
+      {/* //////////////////////////////////////////////////// */}
+
+      <section
+        id="welcome2"
+        className="widescreen:section-min-height tallscreen:section-min-height mb-12 flex h-screen scroll-mt-20 flex-col-reverse items-center justify-center gap-8 p-6 sm:flex-row"
+      >
+        <article className="sm:w-1/2">
+          <h2 className="max-w-md text-center text-4xl font-bold text-slate-900 dark:text-white sm:text-left sm:text-5xl">
+            Welcome to{" "}
+            <span className="text-indigo-700 dark:text-indigo-300">
+              Section
+            </span>{" "}
+            2
+          </h2>
+
+          <figure class="my-12">
+            <blockquote class="relative rounded-3xl bg-teal-600 py-12 pl-14 pr-8 dark:bg-black">
+              <p class="mt-2 text-left text-2xl text-white before:absolute before:top-0 before:left-0 before:translate-x-2 before:translate-y-2 before:transform before:font-serif before:text-9xl before:text-white before:opacity-25 before:content-['\201C'] after:absolute after:-bottom-20 after:right-0 after:-translate-x-2 after:-translate-y-2 after:transform after:font-serif after:text-9xl after:text-white after:opacity-25 after:content-['\201D'] dark:text-slate-400 sm:text-3xl">
+                Acme has always been there for me. Their Explorer rocket arrived
+                in a wooden crate as expected. Life-long customer! A++ shopping
+                experience.
+              </p>
+            </blockquote>
+            <figcaption class="mt-2 text-right text-xl italic text-slate-500 dark:text-slate-400 sm:text-2xl">
+              &#8212;Wile E. Coyote, Genius
+            </figcaption>
+          </figure>
+
+          <p className="text-2-xl mt-4 max-w-md text-center sm:text-left">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum, fuga
+            soluta? Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Doloribus harum facere illum voluptatem nobis similique ab quia odit
+            obcaecati vel culpa quis aspernatur, at omnis expedita adipisci eum
+            est amet!
+          </p>
+
+          {/*        <Link href="/users" >
           See players listing
-        </Link>
-      </div>
+        </Link> */}
+        </article>
+      </section>
+      <hr className="mx-auto w-1/2 bg-black dark:bg-white" />
+      {/* //////////////////////////////////////////////////// */}
+      <section
+        id="welcome3"
+        className="widescreen:section-min-height tallscreen:section-min-height mb-12 flex h-screen scroll-mt-20 flex-col-reverse items-center justify-center gap-8 p-6 sm:flex-row"
+      >
+        <article className="sm:w-1/2">
+          <h2 className="max-w-md text-center text-4xl font-bold text-slate-900 dark:text-white sm:text-left sm:text-5xl">
+            Welcome to{" "}
+            <span className="text-indigo-700 dark:text-indigo-300">
+              Section
+            </span>{" "}
+            3
+          </h2>
+
+          <p className="text-2-xl mt-4 max-w-md text-center sm:text-left">
+            section 3
+          </p>
+
+          {/*        <Link href="/users" >
+          See players listing
+        </Link> */}
+        </article>
+      </section>
     </>
   );
 }

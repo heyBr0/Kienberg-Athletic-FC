@@ -3,9 +3,9 @@ import Navbar from "./Navbar";
 
 const Layout = ({ children }) => {
   return (
-    <div className="content">
+    <div className="mx-auto min-h-screen bg-slate-50 dark:bg-black dark:text-white">
       <Navbar />
-      {children}
+      <main className="mx-auto max-w-4xl">{children}</main>
       <Footer />
     </div>
   );
