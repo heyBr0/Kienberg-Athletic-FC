@@ -8,17 +8,17 @@ const Standings = () => {
         <meta name="keywords" content="users" />
       </Head>
 
-      <div className="grid min-h-full place-content-center">
-        <h2 className="sm:text-5xl max-w-md text-center text-4xl font-bold text-slate-900 dark:text-white sm:text-left">
+      <div
+        className="dark:text-white grid min-h-full place-content-center
+           text-slate-900"
+      >
+        <h2
+          className="dark:text-white max-w-md text-center text-4xl font-bold text-slate-900
+           sm:text-left sm:text-5xl"
+        >
           Table 2022/2023
         </h2>
-        <Table
-          aria-label="Example table with static content"
-          css={{
-            height: "auto",
-            minWidth: "100%",
-          }}
-        >
+        <Table className="dark:text-white bg-white text-slate-900">
           <Table.Header>
             <Table.Column>CLUB</Table.Column>
             <Table.Column>GAMES</Table.Column>
