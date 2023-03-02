@@ -1,24 +1,18 @@
 import Head from "next/head";
 import { Table } from "@nextui-org/react";
-const Standings = () => {
+const Standings = ({ theme }) => {
   return (
     <article>
       <Head>
         <title>Kienberg | Standings</title>
-        <meta name="keywords" content="users" />
+        <meta name="keywords" content="players" />
       </Head>
 
-      <div
-        className="dark:text-white grid min-h-full place-content-center
-           text-slate-900"
-      >
-        <h2
-          className="dark:text-white max-w-md text-center text-4xl font-bold text-slate-900
-           sm:text-left sm:text-5xl"
-        >
+      <div className="grid min-h-full place-content-center">
+        <h2 className="max-w-md text-center text-4xl font-bold sm:text-left sm:text-5xl">
           Table 2022/2023
         </h2>
-        <Table className="dark:text-white bg-white text-slate-900">
+        <Table className="bg-white text-slate-900 dark:text-white">
           <Table.Header>
             <Table.Column>CLUB</Table.Column>
             <Table.Column>GAMES</Table.Column>

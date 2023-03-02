@@ -7,14 +7,14 @@ export default function Home() {
     <>
       <Head>
         <title>Kienberg | Home</title>
-        <meta name="keywords" content="users" />
+        <meta name="keywords" content="players" />
       </Head>
       <nav
-        className="sticky top-20 z-10 hidden space-x-3 text-xl text-black dark:text-white md:block"
+        className="sticky top-20 z-10 hidden space-x-3 text-xl md:block"
         aria-label="main"
       >
-        <a href="#welcome1" className="hover:opacity-90">
-          Tickets
+        <a href="#home" className="hover:opacity-90">
+          Home
         </a>
         <a href="#welcome2" className="hover:opacity-90">
           Stadium
@@ -24,11 +24,11 @@ export default function Home() {
         </a>
       </nav>
       <section
-        id="welcome1"
+        id="home"
         className="widescreen:section-min-height tallscreen:section-min-height mb-12 flex h-screen scroll-mt-20 flex-col-reverse items-center justify-center gap-8 p-6 sm:flex-row"
       >
         <article className="sm:w-1/2">
-          <h2 className="max-w-md text-center text-4xl font-bold text-slate-900 dark:text-white sm:text-left sm:text-5xl">
+          <h2 className="max-w-md text-center text-4xl font-bold sm:text-left sm:text-5xl">
             Welcome to official{" "}
             <span className="text-indigo-700 dark:text-indigo-300">
               Kienberg Athletic
@@ -37,11 +37,7 @@ export default function Home() {
           </h2>
 
           <p className="text-2-xl mt-4 max-w-md text-center sm:text-left">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum, fuga
-            soluta? Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            Doloribus harum facere illum voluptatem nobis similique ab quia odit
-            obcaecati vel culpa quis aspernatur, at omnis expedita adipisci eum
-            est amet!
+          Kienberg Athletic, a small football club located in the charming neighborhood of Berlin Hellersorf. Established in 2022, Kienberg Athletic is a young club with big aspirations. Despite its modest beginnings, the club has already made a name for itself in the local football community, and is well on its way to becoming a major player in the region.
           </p>
 
           <p className="text-2-xl mt-4 max-w-md text-center sm:text-left">
@@ -54,11 +50,11 @@ export default function Home() {
         </article>
 
         <Image
-          src="/8957173.png"
-          width={64}
-          height={64}
+          src="/KBA400.png"
+          width={400}
+          height={400}
           alt="logo"
-          className="w-1/2"
+    
         />
       </section>
 
@@ -70,7 +66,7 @@ export default function Home() {
         className="widescreen:section-min-height tallscreen:section-min-height mb-12 flex h-screen scroll-mt-20 flex-col-reverse items-center justify-center gap-8 p-6 sm:flex-row"
       >
         <article className="sm:w-1/2">
-          <h2 className="max-w-md text-center text-4xl font-bold text-slate-900 dark:text-white sm:text-left sm:text-5xl">
+          <h2 className="max-w-md text-center text-4xl font-bold sm:text-left sm:text-5xl">
             Welcome to{" "}
             <span className="text-indigo-700 dark:text-indigo-300">
               Section

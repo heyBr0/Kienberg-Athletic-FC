@@ -1,42 +1,51 @@
-
-const Footer = () => {
-    return ( 
-        <div id="footer" className="bg-teal-700 text-xl text-white">
-        <div className="mx-auto flex max-w-4xl flex-col p-4 sm:flex-row sm:justify-between">
-          <div className="pt-1 pb-5" >
-            <p>Kienberg Athletic Gmbh</p>       
-            <p> Fairfield, New Jersey 12345-5555</p>
-            <p>
-              {" "}
-              Email:{" "}
-              <a href="mailto:inquiries@acmerockets.com">
-                Inquires@AcmeRockets.com
-              </a>
-            </p>
-            <p>
-              Phone: <a href="tel:+15555555555">(555) 555-5555</a>
-            </p>
-          </div>
-          <nav className="hidden flex-col gap-2 md:flex pt-1 pb-5" aria-label="footer">
-            <a href="#rockets" className="hover:opacity-90">
-              Our Rockets
+const Footer = ({ theme }) => {
+  return (
+    <div
+      id="footer"
+      className={
+        theme === "light"
+          ? " bg-kienbergGreen text-xl text-kienbergBlack"
+          : " bg-kienbergPurple text-xl text-kienbergWhite"
+      }
+    >
+      <div className="mx-auto flex max-w-4xl flex-col p-4 sm:flex-row sm:justify-between">
+        <div className="pt-1 pb-5">
+          <p>Kienberg Athletic Gmbh</p>
+          <p> Fairfield, New Jersey 12345-5555</p>
+          <p>
+            {" "}
+            Email:{" "}
+            <a href="mailto:inquiries@acmerockets.com">
+              Inquires@AcmeRockets.com
             </a>
-            <a href="#testimonials" className="hover:opacity-90">
-              Testimonials
-            </a>
-            <a href="#contact" className="hover:opacity-90">
-              Contact Us
-            </a>
-          </nav>
-          <div className="flex flex-col sm:gap-2 pt-1 pb-5">
-            <p className="text-right">
-              Copyright &copy; <span id="year">2023</span>
-            </p>
-            <p className="text-right">All Rights Reserved</p>
-          </div>
+          </p>
+          <p>
+            Phone: <a href="tel:+15555555555">(555) 555-5555</a>
+          </p>
+        </div>
+        <nav
+          className="hidden flex-col gap-2 pt-1 pb-5 md:flex"
+          aria-label="footer"
+        >
+          <a href="#rockets" className="hover:opacity-90">
+            Our Rockets
+          </a>
+          <a href="#testimonials" className="hover:opacity-90">
+            Testimonials
+          </a>
+          <a href="#contact" className="hover:opacity-90">
+            Contact Us
+          </a>
+        </nav>
+        <div className="flex flex-col pt-1 pb-5 sm:gap-2">
+          <p className="text-right">
+            Copyright &copy; <span id="year">2023</span>
+          </p>
+          <p className="text-right">All Rights Reserved</p>
         </div>
       </div>
-     );
-}
- 
+    </div>
+  );
+};
+
 export default Footer;

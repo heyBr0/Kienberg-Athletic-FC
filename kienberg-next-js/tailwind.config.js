@@ -9,6 +9,15 @@ module.exports = {
         kienbergGreen: {
           DEFAULT: "#A0DD9F",
         },
+        kienbergPurple: {
+          DEFAULT: "#7F5A83",
+        },
+        kienbergWhite: {
+          DEFAULT: "#eef0f2",
+        },
+        kienbergBlack: {
+          DEFAULT: "#1a1d1a",
+        },
       },
       fontFamily: {
         sans: ["Nunito", "sans-serif"],

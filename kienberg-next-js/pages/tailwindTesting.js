@@ -1,14 +1,27 @@
-import styles from "../styles/Testing.module.css";
+import connect from "../mongoClient";
 
-const tailwindTesting = () => {
+export default function MyComponent({ data }) {
   return (
-    <div className={styles.testingContainer}>
-        <h1 className="text-black-600">Test paragraph</h1>
-      <div className="min-h-full grid place-content-center">
-        <p className="bg-emerald-500 w-52 h-52 rounded-full shadow-2xl"></p>
-      </div>
+    <div>
+      {data.map((item) => (
+        <div>
+          <div key={item._id}>
+            {item.fname} <soan> </soan> {item.lname} <soan> </soan> {item.goals}
+          </div>
+        </div>
+      ))}
     </div>
   );
-};
+}
 
-export default tailwindTesting;
+export async function getServerSideProps() {
+  const db = await connect();
+  const collection = db.collection("players");
+  const data = await collection.find().toArray();
+
+  return {
+    props: {
+      data: JSON.parse(JSON.stringify(data)),
+    },
+  };
+}

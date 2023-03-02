@@ -3,7 +3,7 @@ import Image from "next/image";
 import { useRouter } from "next/router";
 import { useState } from "react";
 
-const Navbar = () => {
+const Navbar = ({ theme, toggleTheme }) => {
   const router = useRouter();
   const currentRoute = router.pathname;
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -15,7 +15,13 @@ const Navbar = () => {
   };
 
   return (
-    <div className="sticky top-0 z-10 bg-kienbergGreen text-white">
+    <div
+      className={
+        theme === "light"
+          ? "sticky top-0 z-10 bg-kienbergGreen text-kienbergBlack"
+          : "sticky top-0 z-10 bg-kienbergPurple text-kienbergWhite"
+      }
+    >
       <section className="mx-auto flex max-w-4xl items-center justify-between p-4">
         <h1 className="text-2xl font-medium">
           <Link
@@ -27,13 +33,21 @@ const Navbar = () => {
             }
           >
             <Image
-              src="/8957173.png"
+              src="/Logo.png"
               width={64}
               height={64}
               alt="logo"
               className="mx-auto h-10 w-10 rounded-full"
             />{" "}
-            Kienberg Athletic
+            <span
+              className={
+                theme === "light"
+                  ? " text-kienbergBlack"
+                  : " text-kienbergWhite"
+              }
+            >
+              Kienberg Athletic
+            </span>
           </Link>
         </h1>
 
@@ -65,7 +79,15 @@ const Navbar = () => {
                 : "non-active-class-name hover:opacity-90"
             }
           >
-            About
+            <span
+              className={
+                theme === "light"
+                  ? " text-kienbergBlack"
+                  : " text-kienbergWhite"
+              }
+            >
+              About
+            </span>
           </Link>
           <Link
             href="/standings"
@@ -75,17 +97,33 @@ const Navbar = () => {
                 : "non-active-class-name hover:opacity-90"
             }
           >
-            Standings
+            <span
+              className={
+                theme === "light"
+                  ? " text-kienbergBlack"
+                  : " text-kienbergWhite"
+              }
+            >
+              Standings
+            </span>
           </Link>
           <Link
-            href="/users"
+            href="/players"
             className={
-              currentRoute === "/users"
+              currentRoute === "/players"
                 ? "active-class-name"
                 : "non-active-class-name hover:opacity-90"
             }
           >
-            Players Listing
+            <span
+              className={
+                theme === "light"
+                  ? " text-kienbergBlack"
+                  : " text-kienbergWhite"
+              }
+            >
+              Players Listing
+            </span>
           </Link>
           <Link
             href="/tailwindTesting"
@@ -95,9 +133,20 @@ const Navbar = () => {
                 : "non-active-class-name hover:opacity-90"
             }
           >
-            tailwindTesting
+            <span
+              className={
+                theme === "light"
+                  ? " text-kienbergBlack"
+                  : " text-kienbergWhite"
+              }
+            >
+              tailwindTesting
+            </span>
           </Link>
         </nav>
+        <button onClick={toggleTheme} className="self-end px-6 text-2xl">
+          Dark/Light
+        </button>
       </section>
       <section
         id="mobile-menu"
@@ -108,7 +157,6 @@ const Navbar = () => {
         }
         onClick={toggleMenu}
       >
-        {/*      <button className="self-end px-6 text-8xl">&times;</button> */}
         <nav
           className="flex min-h-screen flex-col items-center py-8"
           aria-label="mobile"

@@ -1,4 +1,3 @@
-/* import '@/styles/globals.css' */
 import "../styles/globals.css";
 import Layout from "@/components/Layout";
 import {SSRProvider} from '@react-aria/ssr'; 
