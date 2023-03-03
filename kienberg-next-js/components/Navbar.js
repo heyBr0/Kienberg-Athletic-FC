@@ -122,13 +122,13 @@ const Navbar = ({ theme, toggleTheme }) => {
                   : " text-kienbergWhite"
               }
             >
-              Players Listing
+              Players
             </span>
           </Link>
           <Link
-            href="/tailwindTesting"
+            href="/trophees"
             className={
-              currentRoute === "/tailwindTesting"
+              currentRoute === "/trophees"
                 ? "active-class-name"
                 : "non-active-class-name hover:opacity-90"
             }
@@ -140,7 +140,7 @@ const Navbar = ({ theme, toggleTheme }) => {
                   : " text-kienbergWhite"
               }
             >
-              tailwindTesting
+              Trophees
             </span>
           </Link>
         </nav>

@@ -1,35 +1,44 @@
-
 import Head from "next/head";
-import styles from "../../styles/Players.module.css"
-import Link from "next/link"
+import styles from "../../styles/Players.module.css";
+import Link from "next/link";
+import connect from "../../mongoClient";
 
-export const getStaticProps = async () => {
-  const res = await fetch("https://jsonplaceholder.typicode.com/users");
-  const data = await res.json();
+export async function getServerSideProps() {
+  const db = await connect();
+  const collection = db.collection("players");
+  const data = await collection.find().toArray();
 
   return {
-    props: { users: data },
+    props: {
+      data: JSON.parse(JSON.stringify(data)),
+    },
   };
-};
+}
 
-const Ninjas = ({ users }) => {
+export default function Players({ data }) {
   return (
     <>
       <Head>
         <title>Kienberg | Players</title>
-        <meta name="keywords" content="users" />
+        <meta name="keywords" content="players" />
       </Head>
 
       <div>
         <h1>All players</h1>
-        {users.map((user) => (
-          <Link href={"/players/" + user.id} key={user.id}>
-            <p className={styles.single}>{user.name}</p>
-          </Link>
+
+        {data.map((item) => (
+          <div key={item._id}>
+            <Link href={`/players/${item._id}`}>
+              <p className={styles.single}>
+                <span>{item.fname} </span>
+                <span> {item.lname}</span>
+                <span>{item.goals}</span>
+                <img src={item.image} alt={`${item.fname} ${item.lname}`} />
+              </p>
+            </Link>
+          </div>
         ))}
       </div>
     </>
   );
-};
-
-export default Ninjas;
+}

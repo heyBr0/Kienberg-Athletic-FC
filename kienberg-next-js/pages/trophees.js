@@ -1,12 +1,31 @@
-import connect from "../mongoClient";
 
-export default function MyComponent({ data }) {
+import React from 'react'
+
+const Trophees = () => {
+  return (
+    <div>Trophees</div>
+  )
+}
+
+export default Trophees
+
+
+
+
+
+
+/* import connect from "../mongoClient";
+
+
+
+
+export default function Trophees({ data }) {
   return (
     <div>
       {data.map((item) => (
         <div>
           <div key={item._id}>
-            {item.fname} <soan> </soan> {item.lname} <soan> </soan> {item.goals}
+            {item.trophee} 
           </div>
         </div>
       ))}
@@ -16,7 +35,7 @@ export default function MyComponent({ data }) {
 
 export async function getServerSideProps() {
   const db = await connect();
-  const collection = db.collection("players");
+  const collection = db.collection("trophees");
   const data = await collection.find().toArray();
 
   return {
@@ -25,3 +44,4 @@ export async function getServerSideProps() {
     },
   };
 }
+ */

@@ -29,7 +29,7 @@ const About = () => {
         <p className="text-2-xl mt-4 max-w-md text-center sm:text-left">
           At the heart of Kienberg Athletic is our team of dedicated and
           passionate players. Currently consisting of 20 talented athletes, our
-          team is led by our club President, Dmitry Benert. Under his guidance,
+          team is led by our club President, Dimi Benert. Under his guidance,
           our players are constantly striving to improve their skills and
           achieve greatness on the field.
         </p>

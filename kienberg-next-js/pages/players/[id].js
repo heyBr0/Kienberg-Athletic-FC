@@ -1,38 +1,29 @@
-export const getStaticPaths = async () => {
-  const res = await fetch("https://jsonplaceholder.typicode.com/users");
-  const data = await res.json();
+import { ObjectId } from "mongodb";
+import connect from "../../mongoClient";
+import Image from "next/image";
 
-  const paths = data.map((player) => {
-    return {
-      params: { id: player.id.toString() },
-    };
-  });
+export async function getServerSideProps(context) {
+  const db = await connect();
+  const { id } = context.query;
+  const collection = db.collection("players");
+  const player = await collection.findOne({ _id: new ObjectId(id) });
 
   return {
-    paths : paths,
-    fallback: false,
+    props: {
+      player: JSON.parse(JSON.stringify(player)),
+    },
   };
-};
+}
 
-export const getStaticProps = async (context) => {
-    const id = context.params.id
-    const res = await fetch("https://jsonplaceholder.typicode.com/users/" + id)
-    const data = await res.json()
-
-    return {
-        props: {player:data}
-    }
-};
-
-const Details = ({player}) => {
+export default function PlayerDetails({ player }) {
   return (
     <div>
-      <h1>{player.name}</h1>
-      <p>{player.email}</p>
-      <p>{player.website}</p>
-      <p>{player.address.city}</p>
+      <h1>
+        {player.fname} {player.lname}
+      </h1>
+      <p>Goals: {player.goals}</p>
+      <img src={player.image} alt={`${player.fname} ${player.lname}`} />
     </div>
   );
-};
+}
 
-export default Details;

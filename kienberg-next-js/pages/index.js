@@ -17,10 +17,10 @@ export default function Home() {
           Home
         </a>
         <a href="#welcome2" className="hover:opacity-90">
-          Stadium
+          Leaders
         </a>
         <a href="#welcome3" className="hover:opacity-90">
-          Contact
+        Testimonials
         </a>
       </nav>
       <section
