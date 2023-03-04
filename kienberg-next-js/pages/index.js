@@ -10,7 +10,7 @@ export default function Home() {
         <meta name="keywords" content="players" />
       </Head>
       <nav
-        className="sticky top-20 z-10 hidden space-x-3 text-xl md:block"
+        className="sticky top-20 z-10 hidden space-x-2 text-lg md:block"
         aria-label="main"
       >
         <a href="#home" className="hover:opacity-90">
@@ -20,12 +20,12 @@ export default function Home() {
           Leaders
         </a>
         <a href="#welcome3" className="hover:opacity-90">
-        Testimonials
+        References
         </a>
       </nav>
       <section
         id="home"
-        className="widescreen:section-min-height tallscreen:section-min-height mb-12 flex h-screen scroll-mt-20 flex-col-reverse items-center justify-center gap-8 p-6 sm:flex-row"
+        className="widescreen:section-min-height tallscreen:section-min-height mb-4 flex h-screen scroll-mt-20 flex-col-reverse items-center justify-center gap-8 p-6 sm:flex-row"
       >
         <article className="sm:w-1/2">
           <h2 className="max-w-md text-center text-4xl font-bold sm:text-left sm:text-5xl">
@@ -36,17 +36,11 @@ export default function Home() {
             website
           </h2>
 
-          <p className="text-2-xl mt-4 max-w-md text-center sm:text-left">
+          <p className="text-2xl mt-2 max-w-md text-center sm:text-left">
           Kienberg Athletic, a small football club located in the charming neighborhood of Berlin Hellersorf. Established in 2022, Kienberg Athletic is a young club with big aspirations. Despite its modest beginnings, the club has already made a name for itself in the local football community, and is well on its way to becoming a major player in the region.
           </p>
 
-          <p className="text-2-xl mt-4 max-w-md text-center sm:text-left">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum, fuga
-            soluta? Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            Doloribus harum facere illum voluptatem nobis similique ab quia odit
-            obcaecati vel culpa quis aspernatur, at omnis expedita adipisci eum
-            est amet!
-          </p>
+     
         </article>
 
         <Image
@@ -63,6 +57,34 @@ export default function Home() {
 
       <section
         id="welcome2"
+        className="widescreen:section-min-height tallscreen:section-min-height mb-12 flex h-screen scroll-mt-20 flex-col-reverse items-center justify-center gap-8 p-6 sm:flex-row"
+      >
+
+<article className="sm:w-1/2">
+          <h2 className="max-w-md text-center text-4xl font-bold sm:text-left sm:text-5xl">
+            Welcome to{" "}
+            <span className="text-indigo-700 dark:text-indigo-300">
+              Section
+            </span>{" "}
+            3
+          </h2>
+
+          <p className="text-2-xl mt-4 max-w-md text-center sm:text-left">
+            section 3
+          </p>
+
+          {/*        <Link href="/users" >
+          See players listing
+        </Link> */}
+        </article>
+
+
+       
+      </section>
+      <hr className="mx-auto w-1/2 bg-black dark:bg-white" />
+      {/* //////////////////////////////////////////////////// */}
+      <section
+        id="welcome3"
         className="widescreen:section-min-height tallscreen:section-min-height mb-12 flex h-screen scroll-mt-20 flex-col-reverse items-center justify-center gap-8 p-6 sm:flex-row"
       >
         <article className="sm:w-1/2">
@@ -93,30 +115,6 @@ export default function Home() {
             Doloribus harum facere illum voluptatem nobis similique ab quia odit
             obcaecati vel culpa quis aspernatur, at omnis expedita adipisci eum
             est amet!
-          </p>
-
-          {/*        <Link href="/users" >
-          See players listing
-        </Link> */}
-        </article>
-      </section>
-      <hr className="mx-auto w-1/2 bg-black dark:bg-white" />
-      {/* //////////////////////////////////////////////////// */}
-      <section
-        id="welcome3"
-        className="widescreen:section-min-height tallscreen:section-min-height mb-12 flex h-screen scroll-mt-20 flex-col-reverse items-center justify-center gap-8 p-6 sm:flex-row"
-      >
-        <article className="sm:w-1/2">
-          <h2 className="max-w-md text-center text-4xl font-bold text-slate-900 dark:text-white sm:text-left sm:text-5xl">
-            Welcome to{" "}
-            <span className="text-indigo-700 dark:text-indigo-300">
-              Section
-            </span>{" "}
-            3
-          </h2>
-
-          <p className="text-2-xl mt-4 max-w-md text-center sm:text-left">
-            section 3
           </p>
 
           {/*        <Link href="/users" >

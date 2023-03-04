@@ -17,7 +17,7 @@ module.exports = {
         },
         kienbergBlack: {
           DEFAULT: "#1a1d1a",
-        },
+        }       
       },
       fontFamily: {
         sans: ["Nunito", "sans-serif"],
