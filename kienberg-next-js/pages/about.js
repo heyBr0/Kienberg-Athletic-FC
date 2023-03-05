@@ -8,7 +8,7 @@ const About = () => {
       </Head>
 
       <article className="sm:w-1/2">
-        <h2 className="max-w-md text-center text-4xl font-bold text-slate-900 dark:text-white sm:text-left sm:text-5xl">
+        <h2 className="max-w-md text-center text-4xl font-bold sm:text-left sm:text-5xl">
           About
         </h2>
         <p className="text-2-xl mt-4 max-w-md text-center sm:text-left">
