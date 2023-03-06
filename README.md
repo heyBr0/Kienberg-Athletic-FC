@@ -4,22 +4,22 @@
 ### Check out the features:
 #### Moving background on the Home page and scroll-navigation
 
-![Home page](/preview/previewPicture.png)
+![Home page](/kienberg-next-js/public/preview/previewPicture.png)
 #### All team players with extended statistics on click
 
-![Players](/preview/playersPreview.png)
+![Players](/kienberg-next-js/public/preview/playersPreview.png)
 
 #### Kits design
 
-![Kits](/preview/kitsPreview.png)
+![Kits](/kienberg-next-js/public/preview/kitsPreview.png)
 
 #### Full responsive mobile view
 
-![Mobile view](/preview/mobilePreview.png)
+![Mobile view](/kienberg-next-js/public/preview/mobilePreview.png)
 #### Light mode switch (dark theme is default)
 
-![Light mode](/preview/lightPreview.png)
+![Light mode](/kienberg-next-js/public/preview/lightPreview.png)
 
 #### As well as League Table with real teams, trophies, testimonials and a lot more.
 
-![Standings](/preview/standingsPreview.png)
+![Standings](/kienberg-next-js/public/preview/standingsPreview.png)
