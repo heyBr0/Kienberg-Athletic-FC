@@ -2,6 +2,7 @@ import Head from "next/head";
 import Image from "next/image";
 import connect from "../mongoClient";
 import Link from "next/link";
+import SlidingBackground from "../components/SlidingBackground";
 
 export async function getServerSideProps() {
   const db = await connect();
@@ -36,6 +37,9 @@ export default function Home({ data }) {
           Testimonials
         </a>
       </nav>
+    
+
+   
       <section
         id="home"
         className="widescreen:section-min-height tallscreen:section-min-height mb-12 flex h-screen scroll-mt-10 flex-col-reverse items-center justify-center gap-12 p-4 sm:flex-row"
@@ -60,7 +64,9 @@ export default function Home({ data }) {
         </article>
 
         <Image src="/KBA400.png" width={350} height={350} alt="logo" />
+        <SlidingBackground/>
       </section>
+      
 
       <hr className="mx-auto w-1/2 bg-black dark:bg-white" />
       {/* //////////////////////////////////////////////////// */}

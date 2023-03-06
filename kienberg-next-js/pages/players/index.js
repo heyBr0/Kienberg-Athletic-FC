@@ -13,17 +13,20 @@ export async function getServerSideProps() {
   const data3 = await collection3.find().toArray();
   const collection4 = db.collection("forwards");
   const data4 = await collection4.find().toArray();
+  const collection5 = db.collection("u19");
+  const data5 = await collection5.find().toArray();
   return {
     props: {
       data: JSON.parse(JSON.stringify(data)),
       data2: JSON.parse(JSON.stringify(data2)),
       data3: JSON.parse(JSON.stringify(data3)),
       data4: JSON.parse(JSON.stringify(data4)),
+      data5: JSON.parse(JSON.stringify(data5)),
     },
   };
 }
 
-export default function Players({ data, data2, data3, data4 }) {
+export default function Players({ data, data2, data3, data4, data5 }) {
   return (
     <div>
       <Head>
@@ -32,7 +35,7 @@ export default function Players({ data, data2, data3, data4 }) {
       </Head>
 
       <h2 className="ml-2 mt-2 mb-2 pt-2 pb-2 text-2xl">Goalkeepers</h2>
-      <div className="ml-2  mt-2 mb-2 flex w-4/5 pt-2 pb-2 sm:flex-row tallscreen:flex-col">
+      <div className="ml-2  mt-2 mb-2 flex  pt-2 pb-2 sm:flex-row tallscreen:flex-col">
         {data.map((item) => (
           <div key={item._id}>
             <Link href={`/players/${item._id}`}>
@@ -69,7 +72,7 @@ export default function Players({ data, data2, data3, data4 }) {
       {/* //////////////////////////////////// */}
 
       <h2 className="mt-2 mb-2 pt-2 pb-2 text-2xl">Defenders</h2>
-      <div className="ml-2  mt-2 mb-2 flex w-4/5 pt-2 pb-2 sm:flex-row tallscreen:flex-col">
+      <div className="ml-2  mt-2 mb-2 flex  pt-2 pb-2 sm:flex-row tallscreen:flex-col">
         {data2.map((item) => (
           <div key={item._id}>
             <Link href={`/players/${item._id}`}>
@@ -103,7 +106,7 @@ export default function Players({ data, data2, data3, data4 }) {
       {/* //////////////////////////////////// */}
 
       <h2 className="mt-2 mb-2 pt-2 pb-2 text-2xl">Midfielders</h2>
-      <div className="ml-2  mt-2 mb-2 flex w-4/5 pt-2 pb-2 sm:flex-row tallscreen:flex-col">
+      <div className="ml-2  mt-2 mb-2 flex  pt-2 pb-2 sm:flex-row tallscreen:flex-col">
         {data3.map((item) => (
           <div key={item._id}>
             <Link href={`/players/${item._id}`}>
@@ -137,7 +140,7 @@ export default function Players({ data, data2, data3, data4 }) {
       {/* //////////////////////////////////// */}
 
       <h2 className="mt-2 mb-2 pt-2 pb-2 text-2xl">Forwards</h2>
-      <div className="ml-2  mt-2 mb-2 flex w-4/5 pt-2 pb-2 sm:flex-row tallscreen:flex-col">
+      <div className="ml-2  mt-2 mb-2 flex  pt-2 pb-2 sm:flex-row tallscreen:flex-col">
         {data4.map((item) => (
           <div key={item._id}>
             <Link href={`/players/${item._id}`}>
@@ -167,6 +170,42 @@ export default function Players({ data, data2, data3, data4 }) {
           </div>
         ))}
       </div>
+
+      <hr className="mx-auto w-1/2 bg-black dark:bg-white mt-12 mb-12" />
+                     {/* //////////////////////////////////// */}
+
+      <h2 className="mt-2 mb-2 pt-2 pb-2 text-2xl">U-19 Youth team</h2>
+      <div className="ml-2  mt-2 mb-2 flex  pt-2 pb-2 sm:flex-row tallscreen:flex-col">
+        {data5.map((item) => (
+          <div key={item._id}>
+            <Link href={`/players/${item._id}`}>
+              <div className="m-2 flex border-l-8 p-1 hover:border-l-[#dabfff]">
+                {item.role === "U-19" && (
+                  <>
+                    <img
+                      src={item.image}
+                      alt={`${item.fname} ${item.lname}`}
+                      className="w-3/5"
+                    />
+
+                    <section>
+                      <span>{item.fname} </span>
+                      <span> {item.lname}</span>
+                      <p>
+                        Apps: <span> {item.apps}</span>
+                      </p>
+                      <p>
+                        Goals: <span> {item.goals}</span>
+                      </p>
+                    </section>
+                  </>
+                )}
+              </div>
+            </Link>
+          </div>
+        ))}
+      </div>
+
     </div>
   );
 }

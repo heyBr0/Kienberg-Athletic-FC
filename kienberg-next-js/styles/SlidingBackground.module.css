@@ -1,0 +1,13 @@
+.slidingBackground {
+    background-image: url('/sliding-background/1football1.png');
+    background-position: right;
+    background-size:contain;
+    transition: background-position 3s ease;
+    position: absolute;
+    top: 68px;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    opacity: 5%;
+    z-index: 0;
+  }
