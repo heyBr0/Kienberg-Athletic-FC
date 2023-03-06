@@ -11,7 +11,7 @@ const Navbar = ({ theme, toggleTheme }) => {
 
   const toggleMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
-    setIsToggleBtnActive(!isToggleBtnActive);
+    setIsToggleBtnActive(!isToggleBtnActive); 
   };
 
   return (
@@ -29,7 +29,7 @@ const Navbar = ({ theme, toggleTheme }) => {
             className={
               currentRoute === "/"
                 ? "active-class-name"
-                : "non-active-class-name hover:opacity-90"
+                : "non-active-class-name hover:opacity-80"
             }
           >
             <Image
@@ -76,7 +76,7 @@ const Navbar = ({ theme, toggleTheme }) => {
             className={
               currentRoute === "/about"
                 ? "active-class-name"
-                : "non-active-class-name hover:opacity-90"
+                : "non-active-class-name hover:opacity-80"
             }
           >
             <span
@@ -94,7 +94,7 @@ const Navbar = ({ theme, toggleTheme }) => {
             className={
               currentRoute === "/standings"
                 ? "active-class-name"
-                : "non-active-class-name hover:opacity-90"
+                : "non-active-class-name hover:opacity-80"
             }
           >
             <span
@@ -112,7 +112,7 @@ const Navbar = ({ theme, toggleTheme }) => {
             className={
               currentRoute === "/players"
                 ? "active-class-name"
-                : "non-active-class-name hover:opacity-90"
+                : "non-active-class-name hover:opacity-80"
             }
           >
             <span
@@ -126,11 +126,11 @@ const Navbar = ({ theme, toggleTheme }) => {
             </span>
           </Link>
           <Link
-            href="/trophees"
+            href="/trophies"
             className={
-              currentRoute === "/trophees"
+              currentRoute === "/trophies"
                 ? "active-class-name"
-                : "non-active-class-name hover:opacity-90"
+                : "non-active-class-name hover:opacity-80"
             }
           >
             <span
@@ -140,19 +140,31 @@ const Navbar = ({ theme, toggleTheme }) => {
                   : " text-kienbergWhite"
               }
             >
-              Trophees
+              Trophies
             </span>
           </Link>
+        
         </nav>
-        <button onClick={toggleTheme} className="self-end px-6 text-2xl">
-          Dark/Light
-        </button>
+        <section className="flex max-w-4xl items-center justify-between p-4">
+        <button
+            onClick={toggleTheme}
+            className="justify-center self-end px-6 align-middle text-2xl"
+          >
+            <Image
+              src="/brightness.png"
+              width={64}
+              height={64}
+              alt="dark-light-toggle"
+              className="mx-auto h-10 w-10 rounded-full"
+            />{" "}
+          </button>
+          </section>
       </section>
       <section
         id="mobile-menu"
         className={
           isMobileMenuOpen
-            ? "top-68 absolute flex w-full origin-top animate-open-menu flex-col justify-center bg-black text-5xl"
+            ? "top-68 absolute flex w-full origin-top animate-open-menu flex-col justify-center bg-black text-white text-5xl z-50 pt-16"
             : "hidden"
         }
         onClick={toggleMenu}
@@ -161,33 +173,33 @@ const Navbar = ({ theme, toggleTheme }) => {
           className="flex min-h-screen flex-col items-center py-8"
           aria-label="mobile"
         >
-          <a
-            href="/#welcome1"
-            className="w-full py-6 text-center hover:opacity-90"
+          <Link
+            href="/"
+            className="w-full py-6 text-center hover:opacity-80"
           >
             Home
-          </a>
-          <a
-            href="/#welcome2"
-            className="w-full py-6 text-center hover:opacity-90"
+          </Link>
+          <Link
+            href="/about"
+            className="w-full py-6 text-center hover:opacity-80"
           >
-            Tickers
-          </a>
-          <a
-            href="/#welcome3"
-            className="w-full py-6 text-center hover:opacity-90"
-          >
-            Kits
-          </a>
-          <a href="/about" className="w-full py-6 text-center hover:opacity-90">
             About
-          </a>
-          <a
+          </Link>
+          <Link
             href="/standings"
-            className="w-full py-6 text-center hover:opacity-90"
+            className="w-full py-6 text-center hover:opacity-80"
           >
             Standings
-          </a>
+          </Link>
+          <Link href="/players" className="w-full py-6 text-center hover:opacity-80">
+            Players
+          </Link>
+          <Link
+            href="/trophies"
+            className="w-full py-6 text-center hover:opacity-80"
+          >
+            Trophies
+          </Link>
         </nav>
       </section>
     </div>

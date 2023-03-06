@@ -25,14 +25,14 @@ export async function getServerSideProps() {
 
 export default function Players({ data, data2, data3, data4 }) {
   return (
-    <>
+    <div>
       <Head>
         <title>Kienberg | Players</title>
         <meta name="keywords" content="players" />
       </Head>
 
-      <h2 className="mt-2 mb-2 pt-2 pb-2 text-2xl">Goalkeepers</h2>
-      <div className="mt-2 mb-2 flex w-4/5 pt-2 pb-2">
+      <h2 className="ml-2 mt-2 mb-2 pt-2 pb-2 text-2xl">Goalkeepers</h2>
+      <div className="ml-2  mt-2 mb-2 flex w-4/5 pt-2 pb-2 sm:flex-row tallscreen:flex-col">
         {data.map((item) => (
           <div key={item._id}>
             <Link href={`/players/${item._id}`}>
@@ -69,7 +69,7 @@ export default function Players({ data, data2, data3, data4 }) {
       {/* //////////////////////////////////// */}
 
       <h2 className="mt-2 mb-2 pt-2 pb-2 text-2xl">Defenders</h2>
-      <div className="mt-2 mb-2 flex w-4/5 pt-2 pb-2">
+      <div className="ml-2  mt-2 mb-2 flex w-4/5 pt-2 pb-2 sm:flex-row tallscreen:flex-col">
         {data2.map((item) => (
           <div key={item._id}>
             <Link href={`/players/${item._id}`}>
@@ -103,7 +103,7 @@ export default function Players({ data, data2, data3, data4 }) {
       {/* //////////////////////////////////// */}
 
       <h2 className="mt-2 mb-2 pt-2 pb-2 text-2xl">Midfielders</h2>
-      <div className="mt-2 mb-2 flex w-4/5 pt-2 pb-2">
+      <div className="ml-2  mt-2 mb-2 flex w-4/5 pt-2 pb-2 sm:flex-row tallscreen:flex-col">
         {data3.map((item) => (
           <div key={item._id}>
             <Link href={`/players/${item._id}`}>
@@ -137,7 +137,7 @@ export default function Players({ data, data2, data3, data4 }) {
       {/* //////////////////////////////////// */}
 
       <h2 className="mt-2 mb-2 pt-2 pb-2 text-2xl">Forwards</h2>
-      <div className="w-7/8 mt-2 mb-2 flex pt-2 pb-2">
+      <div className="ml-2  mt-2 mb-2 flex w-4/5 pt-2 pb-2 sm:flex-row tallscreen:flex-col">
         {data4.map((item) => (
           <div key={item._id}>
             <Link href={`/players/${item._id}`}>
@@ -167,6 +167,6 @@ export default function Players({ data, data2, data3, data4 }) {
           </div>
         ))}
       </div>
-    </>
+    </div>
   );
 }

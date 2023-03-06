@@ -20,7 +20,7 @@ export default function Home({ data }) {
     <>
       <Head>
         <title>Kienberg | Home</title>
-        <meta name="keywords" content="players" />
+        <meta name="keywords" content="home" />
       </Head>
       <nav
         className="sticky top-20 z-10 hidden space-x-3 text-base md:block"
@@ -29,16 +29,16 @@ export default function Home({ data }) {
         <a href="#home" className="hover:opacity-90">
           Home
         </a>
-        <a href="#welcome2" className="hover:opacity-90">
+        <a href="#leaders" className="hover:opacity-90">
           Leaders
         </a>
-        <a href="#welcome3" className="hover:opacity-90">
+        <a href="#testimonials" className="hover:opacity-90">
           Testimonials
         </a>
       </nav>
       <section
         id="home"
-        className="widescreen:section-min-height tallscreen:section-min-height mb-4 flex h-screen scroll-mt-20 flex-col-reverse items-center justify-center gap-12 p-4 sm:flex-row"
+        className="widescreen:section-min-height tallscreen:section-min-height mb-12 flex h-screen scroll-mt-10 flex-col-reverse items-center justify-center gap-12 p-4 sm:flex-row"
       >
         <article className="sm:w-1/2">
           <h2 className="max-w-md text-center text-4xl font-bold sm:text-left sm:text-5xl">
@@ -49,7 +49,7 @@ export default function Home({ data }) {
             website
           </h2>
 
-          <p className="mt-2 max-w-md text-justify text-2xl">
+          <p className="mt-2 p-2 max-w-md text-justify text-2xl">
             Kienberg Athletic, a small football club located in the charming
             neighborhood of Berlin Hellersorf. Established in 2022, Kienberg
             Athletic is a young club with big aspirations. Despite its modest
@@ -59,15 +59,15 @@ export default function Home({ data }) {
           </p>
         </article>
 
-        <Image src="/KBA400.png" width={400} height={400} alt="logo" />
+        <Image src="/KBA400.png" width={350} height={350} alt="logo" />
       </section>
 
       <hr className="mx-auto w-1/2 bg-black dark:bg-white" />
       {/* //////////////////////////////////////////////////// */}
 
       <section
-        id="welcome2"
-        className="widescreen:section-min-height tallscreen:section-min-height mb-12 flex h-screen scroll-mt-20 flex-col-reverse items-center justify-center gap-8 p-6 sm:flex-row"
+        id="leaders"
+        className="widescreen:section-min-height tallscreen:section-min-height mt-12 mb-12 flex h-screen scroll-mt-10 flex-col-reverse items-center justify-center gap-8 p-6 sm:flex-row"
       >
         <article className="sm:w-1/2">
           <h2 className="max-w-md text-left text-4xl font-bold sm:text-left sm:text-5xl">
@@ -153,7 +153,7 @@ export default function Home({ data }) {
               </div>
             ))}
           </div>
-<button className="bg-[#7F5A83] border-white w-60 p-4 border-radius-8">
+<button className="bg-[#7F5A83] border-white w-60 p-4 border-radius-8 hover:scale-110">
 <Link href="/players">See all players and stats</Link>
 </button>
       
@@ -162,8 +162,8 @@ export default function Home({ data }) {
       <hr className="mx-auto w-1/2 bg-black dark:bg-white" />
       {/* //////////////////////////////////////////////////// */}
       <section
-        id="welcome3"
-        className="widescreen:section-min-height tallscreen:section-min-height mb-12 flex h-screen scroll-mt-20 flex-col-reverse items-center justify-center gap-8 p-6 sm:flex-row"
+        id="testimonials"
+        className="widescreen:section-min-height tallscreen:section-min-height mb-12 flex h-screen scroll-mt-10 flex-col-reverse items-center justify-center gap-8 p-6 sm:flex-row"
       >
         <article className="sm:w-1/2">
           <h2 className="max-w-md text-center text-4xl font-bold sm:text-left sm:text-5xl">
@@ -183,7 +183,7 @@ export default function Home({ data }) {
             </figcaption>
           </figure>
 
-          <p className="mt-4 max-w-md text-justify text-lg ">
+          <p className="mt-4 max-w-md text-justify text-xl ">
             Dear Jürgen, thank you for your kind words and the confidence you
             have in our team. It would be an honor to meet you and your team in
             the Champions League someday. We hope to continue to work hard and
@@ -192,9 +192,7 @@ export default function Home({ data }) {
             regards, Kienberg Athletic
           </p>
 
-          {/*        <Link href="/users" >
-          See players listing
-        </Link> */}
+      
         </article>
       </section>
     </>

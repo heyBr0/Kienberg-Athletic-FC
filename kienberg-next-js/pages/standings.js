@@ -5,7 +5,7 @@ const Standings = ({ theme }) => {
     <article>
       <Head>
         <title>Kienberg | Standings</title>
-        <meta name="keywords" content="players" />
+        <meta name="keywords" content="standings" />
       </Head>
 
       <div className="grid min-h-full place-content-center">
